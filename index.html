@@ -11,29 +11,49 @@
             padding: 0;
             box-sizing: border-box;
         }
-        body{
+
+        body {
             font-size: var(--font-size);
         }
-        #app{
-            margin: 20px;
+
+        #app {
+            margin: 400px;
         }
+
         :root {
+            --border: 1px solid;
             --button-height: 32px;
             --font-size: 14px;
             --button-background: white;
             --button-active-background: #eee;
-            --border-radius:4px;
-            --color:#333;
-            --border-color:#999;
-            --border-color-hover:#666;
+            --border-radius: 4px;
+            --color: #333;
+            --border-color: #999;
+            --border-color-hover: #666;
         }
     </style>
+    <style>
+        .icon {
+            width: 1em;
+            height: 1em;
+        }
+    </style>
+    <link rel="shortcut icon" type="image/x-icon" href="./src/favicon.ico"/>
     <title>轱 辘</title>
 </head>
 <body>
-    <div id="app">
-        <g-button>按钮</g-button>
-    </div>
-    <script src="src/app.js"></script>
+<div id="app">
+    <g-button>
+        按钮
+    </g-button>
+    <g-button icon="settings">
+        按钮
+    </g-button>
+    <g-button icon="settings" icon-position="right">
+        按钮
+    </g-button>
+</div>
+<script src="src/app.js"></script>
+<script src="//at.alicdn.com/t/font_1602228_6l97snapm8j.js"></script>
 </body>
 </html>

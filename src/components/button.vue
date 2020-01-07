@@ -1,33 +1,79 @@
 <template>
-    <button class="g-button">
-        <slot></slot>
+    <button class="g-button" :class="{[`icon-${iconPosition}`]:true}">
+        <svg v-if="icon" class="icon">
+            <use :xlink:href=`#i${icon}`></use>
+        </svg>
+        <div class="icon-content">
+            <slot></slot>
+        </div>
     </button>
 </template>
 
 <script>
     export default {
-        name:'buttonOne'
+        name: 'buttonOne',
+        props: {
+            icon:{},
+            iconPosition:{
+                type:String,
+                default:'left',
+                validator(value){
+                    return !(value !== 'left' && value !== 'right')
+                }
+            }
+        }
     }
 </script>
 
 <style lang="scss">
     .g-button {
-        padding: 0 1em;
+        padding:0 1em;
         font-size: var(--font-size);
         height: var(--button-height);
+        line-height: var(--font-size);
         background: var(--button-background);
         border-color: var(--border-color);
         color: var(--color);
         border-radius: var(--border-radius);
-        &:hover{
+        border: var(--border);
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        vertical-align: middle;
+
+        &:hover {
             border-color: var(--border-color-hover);
             cursor: pointer;
         }
-        &:active{
+
+        &:active {
             background: var(--button-active-background);
         }
-        &:focus{
+
+        &:focus {
             outline: none;
+        }
+
+        > .icon {
+            order: 1;
+            margin-left: 0;
+            margin-right: .4em;
+        }
+
+        > .icon-content {
+            order: 2
+        }
+
+        &.icon-right {
+            > .icon {
+                order: 2;
+                margin-left: .4em;
+                margin-right: 0;
+            }
+
+            > .icon-content {
+                order: 1
+            }
         }
     }
 </style>
