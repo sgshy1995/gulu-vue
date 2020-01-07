@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "git@github.com:sgshy1995/gulu-vue.git",
-  "author": "Singlesaul <singlesaulwork@gmail.com>",
+  "author": "EdenSheng <singlesaulwork@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "vue": "^2.6.11",
