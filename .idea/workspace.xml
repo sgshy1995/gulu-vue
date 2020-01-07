@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e82c4d9-258f-4edb-8a9f-9ec77be21825" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/button.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,12 +55,31 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1578382731387</updated>
-      <workItem from="1578382732835" duration="2982000" />
+      <workItem from="1578382732835" duration="3552000" />
     </task>
+    <task id="LOCAL-00001" summary="添加按钮基本样式">
+      <created>1578387448426</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1578387448426</updated>
+    </task>
+    <task id="LOCAL-00002" summary="添加按钮基本样式">
+      <created>1578387496967</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1578387496967</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="添加按钮基本样式" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加按钮基本样式" />
   </component>
   <component name="WindowStateProjectService">
     <state x="240" y="77" width="800" height="717" key="#Intentions" timestamp="1578383967922">
@@ -85,14 +102,18 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="380" y="256" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1280.777@0.23.1280.777" timestamp="1578386699420" />
-    <state x="209" y="23" key="CommitChangelistDialog2" timestamp="1578387448089">
+    <state x="209" y="23" key="CommitChangelistDialog2" timestamp="1578387496661">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="209" y="23" key="CommitChangelistDialog2/0.23.1280.777@0.23.1280.777" timestamp="1578387448089" />
+    <state x="209" y="23" key="CommitChangelistDialog2/0.23.1280.777@0.23.1280.777" timestamp="1578387496661" />
     <state x="179" y="50" key="SettingsEditor" timestamp="1578386282622">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="179" y="50" key="SettingsEditor/0.23.1280.777@0.23.1280.777" timestamp="1578386282622" />
+    <state x="240" y="147" key="Vcs.Push.Dialog.v2" timestamp="1578387560489">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="240" y="147" key="Vcs.Push.Dialog.v2/0.23.1280.777@0.23.1280.777" timestamp="1578387560489" />
     <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1578387413312">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
