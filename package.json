@@ -22,5 +22,8 @@
   },
   "posthtml": {
     "recognizeSelfClosing": true
+  },
+  "scripts": {
+    "start": "npx parcel index.html --no-cache"
   }
 }
