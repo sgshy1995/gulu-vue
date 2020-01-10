@@ -24,6 +24,58 @@ Tips:
 *,*::before,*::after{box-sizing: border-box;}
 ```
 
+IE8 及以上浏览器支持此样式。
+
+你还需要设置一些默认变量来引入组件的样式（后续会改为 SCSS 变量）。
+
+```css
+:root {
+  --border: 1px solid;
+  --button-height: 32px;
+  --font-size: 14px;
+  --button-background: white;
+  --button-active-background: #eee;
+  --border-radius: 4px;
+  --color: #333;
+  --border-color: #999;
+  --border-color-hover: #666;
+}
+```
+
+IE15 及以上浏览器支持此样式。
+
+你还需引入该框架中的 css 文件（后续会优化）。在 main.js 或所需组件中引入：
+
+```js
+import 'eden-gulu/dist/index.css'
+```
+
+#### 安装 eden-gulu
+
+推荐在项目中使用 yarn 安装：
+
+```bash
+yarn add eden-gulu
+```
+
+#### 引入 eden-gulu
+
+在 Vue 组件中引入：
+
+```js
+import {Button,ButtonGroup,Icon} from 'eden-gulu'
+export default {
+  name: 'app',
+  components: {
+    'g-button': Button,
+    'g-icon': Icon,
+    'g-button-group': ButtonGroup
+  }
+}
+```
+
+#### 引入 svg
+
 #### 关于 parcel
 
 很多组件使用了自闭合标签。
@@ -50,3 +102,8 @@ Tips:
 
 ## 贡献代码
 
+## 版权信息
+
+[MIT](https://opensource.org/licenses/MIT)
+
+Copyright (c) 2019-present, Guangsheng (Eden) Sheng
