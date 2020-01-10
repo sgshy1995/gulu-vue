@@ -1,6 +1,7 @@
 {
-  "name": "gulu-vue",
-  "version": "1.0.0",
+  "name": "eden-gulu",
+  "version": "0.0.1",
+  "description": "一个 UI 框架",
   "main": "index.js",
   "repository": "git@github.com:sgshy1995/gulu-vue.git",
   "author": "EdenSheng <singlesaul@163.com>",
