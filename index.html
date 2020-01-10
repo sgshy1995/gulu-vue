@@ -1,12 +1,15 @@
 <!doctype html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <style>
-        * {
+        *,
+        *::before,
+        *::after {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -32,30 +35,32 @@
             --border-color-hover: #666;
         }
     </style>
-    <link rel="shortcut icon" type="image/x-icon" href="./src/favicon.ico"/>
+    <link rel="shortcut icon" type="image/x-icon" href="./src/favicon.ico" />
     <title>轱 辘</title>
 </head>
+
 <body>
-<div id="app">
-    <g-button :loading.sync="loading1">
-        按钮
-    </g-button>
-    <g-button icon="settings" :loading.sync="loading2">
-        按钮
-    </g-button>
-    <g-button icon="settings" icon-position="right" :loading.sync="loading3">
-        按钮
-    </g-button>
-    <g-button-group>
-        <g-button icon="left">上一页</g-button>
-        <g-button>更多</g-button>
-        <g-button icon="right" icon-position="right">下一页</g-button>
-    </g-button-group>
-    <div id="app1"></div>
-    <div id="app2"></div>
-    <div id="app3"></div>
-</div>
-<script src="src/app.js"></script>
-<script src="//at.alicdn.com/t/font_1602228_x7cegwx7s2.js"></script>
+    <div id="app">
+        <g-button :loading.sync="loading1">
+            按钮
+        </g-button>
+        <g-button icon="settings" :loading.sync="loading2">
+            按钮
+        </g-button>
+        <g-button icon="settings" icon-position="right" :loading.sync="loading3">
+            按钮
+        </g-button>
+        <g-button-group>
+            <g-button icon="left">上一页</g-button>
+            <g-button>更多</g-button>
+            <g-button icon="right" icon-position="right">下一页</g-button>
+        </g-button-group>
+        <div id="app1"></div>
+        <div id="app2"></div>
+        <div id="app3"></div>
+    </div>
+    <script src="src/app.js"></script>
+    <script src="//at.alicdn.com/t/font_1602228_x7cegwx7s2.js"></script>
 </body>
+
 </html>

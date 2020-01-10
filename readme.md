@@ -1,5 +1,7 @@
 # 轱辘（Vue 轮子）
 
+[![Build Status](https://travis-ci.org/sgshy1995/gulu-vue.svg?branch=master)](https://travis-ci.org/sgshy1995/gulu-vue)
+
 自制简易版 UI 框架
 
 作者：盛光晟 (Eden)
@@ -14,8 +16,9 @@
 请设置 CSS 样式 `border-box`。
 
 Tips:
+
 ```css
-*{box-sizing: border-box;}
+*,*::before,*::after{box-sizing: border-box;}
 ```
 
 ### 关于 parcel
