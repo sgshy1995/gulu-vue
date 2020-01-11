@@ -1,6 +1,6 @@
 {
   "name": "eden-gulu",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "一个 UI 框架",
   "main": "dist/index.js",
   "repository": "git@github.com:sgshy1995/gulu-vue.git",
@@ -36,6 +36,7 @@
   "scripts": {
     "start": "npx parcel index.html --no-cache",
     "dev-test": "parcel watch test/* --no-cache & karma start",
-    "test": "parcel build test/* --no-cache --no-minify && karma start --single-run"
+    "test": "parcel build test/* --no-cache --no-minify && karma start --single-run",
+    "pre-index": "npx parcel build index.js --no-cache --no-minify"
   }
 }
