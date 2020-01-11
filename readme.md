@@ -1,8 +1,8 @@
 # 轱辘（Vue 轮子）
 
 [![Build Status](https://travis-ci.org/sgshy1995/gulu-vue.svg?branch=master)](https://travis-ci.org/sgshy1995/gulu-vue)
-![npm](https://img.shields.io/npm/v/eden-gulu)
-![GitHub](https://img.shields.io/github/license/sgshy1995/gulu-vue)
+[![npm](https://img.shields.io/npm/v/eden-gulu)](https://www.npmjs.com/package/eden-gulu)
+[![GitHub](https://img.shields.io/github/license/sgshy1995/gulu-vue)](https://github.com/sgshy1995/gulu-vue/blob/master/LICENSE)
 
 
 ## 介绍
@@ -73,8 +73,6 @@ export default {
   }
 }
 ```
-
-#### 引入 svg
 
 #### 关于 parcel
 

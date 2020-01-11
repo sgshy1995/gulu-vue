@@ -1,18 +1,19 @@
 <template>
-    <svg v-if="name" class="g-icon">
-        <use :xlink:href="`#i${name}`"></use>
-    </svg>
+  <svg v-if="name" class="g-icon">
+    <use :xlink:href="`#i${name}`" />
+  </svg>
 </template>
 
 <script>
-    export default {
-        props:['name']
-    }
+import '../svg'
+export default {
+  props: ["name"]
+};
 </script>
 
 <style lang="scss">
-    .g-icon {
-        width: 1em;
-        height: 1em;
-    }
+.g-icon {
+  width: 1em;
+  height: 1em;
+}
 </style>
