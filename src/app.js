@@ -17,6 +17,11 @@ new Vue({
             loading2:false,
             loading3:true
         }
+    },
+    methods: {
+        changeInput(e) {
+            console.log(e)
+        }
     }
 })
 
