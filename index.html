@@ -44,7 +44,25 @@
 </head>
 
 <body>
+
     <div id="app">
+        <div class="box" style="border:1px solid red;">
+            <g-row gutter="20">
+                <g-col span="10">1</g-col>
+                <g-col span="14">2</g-col>
+            </g-row>
+            <g-row>
+                <g-col span="2">1</g-col>
+                <g-col span="10" offset="2">2</g-col>
+                <g-col span="5" offset="5">3</g-col>
+            </g-row>
+            <g-row>
+                <g-col>1</g-col>
+                <g-col>2</g-col>
+                <g-col>3</g-col>
+                <g-col>4</g-col>
+            </g-row>
+        </div>
         <div class="box">
             <g-button :loading.sync="loading1">
                 按钮

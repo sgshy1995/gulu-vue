@@ -3,18 +3,22 @@ import Button from './components/button'
 import Icon from './components/icon'
 import ButtonGroup from './components/button-group'
 import Input from './components/input'
+import Row from './components/row'
+import Col from './components/col'
 
-Vue.component('g-button',Button)
-Vue.component('g-icon',Icon)
+Vue.component('g-button', Button)
+Vue.component('g-icon', Icon)
 Vue.component('g-button-group', ButtonGroup)
 Vue.component('g-input', Input)
+Vue.component('g-row', Row)
+Vue.component('g-col', Col)
 
 new Vue({
-    el:'#app',
+    el: '#app',
     data() {
-        return{
-            loading1:true,
-            loading2:false,
+        return {
+            loading1: true,
+            loading2: false,
             loading3: true,
             message: '支持双向绑定'
         }
@@ -47,7 +51,7 @@ try {
         vm.$el.remove()
         vm.$destroy()
     }
-    
+
     {
         const Constructor = Vue.extend(Button)
         const vm = new Constructor({
@@ -62,7 +66,7 @@ try {
         vm.$el.remove()
         vm.$destroy()
     }
-    
+
     {
         const Constructor = Vue.extend(Button)
         const vm = new Constructor({
@@ -77,7 +81,7 @@ try {
         vm.$el.remove()
         vm.$destroy()
     }
-    
+
     {
         const Constructor = Vue.extend(Button)
         const vm = new Constructor({
@@ -93,8 +97,8 @@ try {
         vm.$el.remove()
         vm.$destroy()
     }
-    
-    
+
+
     {
         const Constructor = Vue.extend(Button)
         const vm = new Constructor({
@@ -110,7 +114,7 @@ try {
         button.click()
         expect(spy).to.have.been.called()
     }
-    
+
     {
         const Constructor = Vue.extend(Button)
         const vm = new Constructor({
@@ -125,7 +129,7 @@ try {
         button.click()
         expect(spy).to.have.been.called()
     }
-    
+
 }catch (error) {
     window.errors = [error]
 } finally {

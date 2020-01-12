@@ -46,17 +46,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/* 
---border: 1px solid;
---button-height: 32px;
---font-size: 14px;
---button-background: white;
---button-active-background: #eee;
---border-radius: 4px;
---color: #333;
---border-color: #999;
---border-color-hover: #666; 
-*/
 $height: 32px;
 $border-color: #999;
 $border-color-hover: #666;
