@@ -15,7 +15,8 @@ new Vue({
         return{
             loading1:true,
             loading2:false,
-            loading3:true
+            loading3: true,
+            message: '支持双向绑定'
         }
     },
     methods: {
