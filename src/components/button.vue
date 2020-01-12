@@ -16,7 +16,7 @@
 <script>
 import Icon from './icon'
 export default {
-  name: "buttonOne",
+  name: "GButton",
   components:{
       'g-icon':Icon
   },
@@ -37,7 +37,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @keyframes spin {
   0% {
     transform: rotate(0deg);

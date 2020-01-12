@@ -5,13 +5,14 @@
 </template>
 
 <script>
-import '../svg'
+import "../svg";
 export default {
+  name: "GIcon",
   props: ["name"]
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .g-icon {
   width: 1em;
   height: 1em;

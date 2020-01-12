@@ -2,10 +2,12 @@ import Vue from 'vue'
 import Button from './components/button'
 import Icon from './components/icon'
 import ButtonGroup from './components/button-group'
+import Input from './components/input'
 
 Vue.component('g-button',Button)
 Vue.component('g-icon',Icon)
-Vue.component('g-button-group',ButtonGroup)
+Vue.component('g-button-group', ButtonGroup)
+Vue.component('g-input', Input)
 
 new Vue({
     el:'#app',
@@ -18,7 +20,7 @@ new Vue({
     }
 })
 
-// 单元测试
+/* // 单元测试
 
 import chai from 'chai'
 import spies from 'chai-spies'
@@ -86,7 +88,7 @@ try {
         vm.$destroy()
     }
     
-    /*
+    
     {
         const Constructor = Vue.extend(Button)
         const vm = new Constructor({
@@ -101,7 +103,7 @@ try {
         console.log(button)
         button.click()
         expect(spy).to.have.been.called()
-    }*/
+    }
     
     {
         const Constructor = Vue.extend(Button)
@@ -124,4 +126,4 @@ try {
     window.errors && window.errors.map((error) => {
         console.error(error.message)
     })
-}
+} */
