@@ -42,7 +42,7 @@ export default {
 <style lang="scss" scoped>
 .row {
   display: flex;
-  overflow: hidden;
+  flex-wrap: wrap;
   &.align-right{
     justify-content: flex-end;
   }
