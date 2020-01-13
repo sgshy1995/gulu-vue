@@ -7,6 +7,7 @@
   "author": "EdenSheng <singlesaul@163.com>",
   "license": "MIT",
   "dependencies": {
+    "modul": "^0.0.1",
     "vue": "^2.6.11",
     "vue-hot-reload-api": "^2.3.4"
   },
