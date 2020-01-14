@@ -38,56 +38,8 @@
 
 <body>
     <div id="app">
-        <g-layout style="height: 100vh;">
-            <g-sider>sider</g-sider>
-            <g-layout>
-                <g-header>header</g-header>
-                <g-content>content</g-content>
-                <g-footer>footer</g-footer>
-            </g-layout>
-        </g-layout>
-<!--         <div class="box">
-            <g-row>
-                <g-col span="24" :ipad="{span:12}" :narrow-pc="{span:8}" :pc="{span:4}">自适应</g-col>
-                <g-col span="24" :ipad="{span:12}" :narrow-pc="{span:8}" :pc="{span:4}">自适应</g-col>
-                <g-col span="24" :ipad="{span:12}" :narrow-pc="{span:8}" :pc="{span:4}">自适应</g-col>
-                <g-col span="24" :ipad="{span:12}" :narrow-pc="{span:8}" :pc="{span:4}">自适应</g-col>
-                <g-col span="24" :ipad="{span:12}" :narrow-pc="{span:8}" :pc="{span:4}">自适应</g-col>
-                <g-col span="24" :ipad="{span:12}" :narrow-pc="{span:8}" :pc="{span:4}">自适应</g-col>
-            </g-row>
-        </div>
-        <div class="box">
-            <g-button :loading.sync="loading1">
-                按钮
-            </g-button>
-            <g-button icon="settings" :loading.sync="loading2">
-                按钮
-            </g-button>
-            <g-button icon="settings" icon-position="right" :loading.sync="loading3">
-                按钮
-            </g-button>
-            <g-button-group>
-                <g-button icon="left">上一页</g-button>
-                <g-button>更多</g-button>
-                <g-button icon="right" icon-position="right">下一页</g-button>
-            </g-button-group>
-        </div>
-        <div class="box">
-            <g-input value="默认样式"></g-input />
-            <g-input value="不可选中" disabled></g-input />
-            <g-input value="只读" readonly></g-input />
-        </div>
-        <div class="box">
-            <g-input value="错误" error="长度不可以小于3"></g-input />
-        </div>
-        <div class="box">
-            <g-input value="提示" info="可以使用中文"></g-input>
-        </div>
-        <div class="box">
-            <g-input v-model="message"></g-input>
-            <span style="font-size: 12px">{{message}}</span>
-        </div>
- -->    </div>
+        <button @click="showToast">点击展示</button>
+    </div>
     <script src="src/app.js"></script>
 </body>
 
