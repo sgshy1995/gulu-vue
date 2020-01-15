@@ -70,6 +70,7 @@ export default {
     },
     close() {
       this.$el.remove();
+      this.$emit("close");
       this.$destroy();
     },
     onClickClose() {
@@ -97,17 +98,48 @@ export default {
   align-items: center;
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
   text-align: center;
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes slide-down {
+    0% {
+      transform: translate(-50%,-100%);
+    }
+    100%{
+      transform: translate(-50%,0%);
+    }
+  }
+  @keyframes slide-up {
+    0%{
+      transform: translate(-50%,100%)
+    }
+    100%{
+      transform: translate(-50%,0%)
+    }
+  }
   &.position-top {
     top: 0;
     transform: translateX(-50%);
+    animation: slide-down 0.5s;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
   }
   &.position-bottom {
     bottom: 0;
     transform: translateX(-50%);
+    animation: slide-up 0.5s;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
   &.position-center {
     top: 50%;
     transform: translate(-50%, -50%);
+    animation: fade-in 0.5s;
   }
   .message {
     padding: 0.3em 0;

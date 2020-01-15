@@ -49,7 +49,7 @@ new Vue({
                     }
                 },
                 autoClose: false,
-                position:'center'
+                position:'bottom'
             })
         }
     }
