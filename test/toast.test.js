@@ -25,8 +25,8 @@ describe('Toast', () => {
             div.remove()
             vm.$destroy()
         })
-    })
-    
+    }) 
+
     it('可以接受 closeButton 属性', (done) => {
         const callback = sinon.fake();
         const Constructor = Vue.extend(Toast)
@@ -38,18 +38,18 @@ describe('Toast', () => {
                 }
             }
         }).$mount()
+        vm.$on('click', callback)
+        const closeButton = vm.$el.querySelector('.close')
+        expect(closeButton.innerHTML).to.equal('hi')
         setTimeout(() => {
-            vm.$on('click', callback)
-            const closeButton = vm.$el.querySelector('.close')
-            expect(closeButton.innerHTML).to.equal('hi')
             closeButton.click()
             expect(callback).to.have.been.called
             done()
             vm.$el.remove()
             vm.$destroy()
-        },0)
+        }, 0)
     })
-    
+
     it('可以接受 enableHtml 属性', (done) => {
         const Constructor = Vue.extend(Toast)
         const vm = new Constructor({
@@ -59,17 +59,17 @@ describe('Toast', () => {
         })
         vm.$slots.default = "<a href='http://localhost' id='a-target'>QQ</a>"
         vm.$mount()
+        const aTarget = vm.$el.querySelector('#a-target')
+        expect(aTarget).to.exist
+        expect(aTarget.getAttribute('href')).to.equal('http://localhost')
+        expect(aTarget.textContent.trim()).to.equal('QQ')
         setTimeout(() => {
-            const aTarget = vm.$el.querySelector('#a-target')
-            expect(aTarget).to.exist
-            expect(aTarget.getAttribute('href')).to.equal('http://localhost')
-            expect(aTarget.textContent.trim()).to.equal('QQ')
-            done()
+            done()            
             vm.$el.remove()
             vm.$destroy()
         },0)
     })
-    
+
     it('可以接受 position 属性', (done) => {
         const Constructor = Vue.extend(Toast)
         const vm = new Constructor({
@@ -77,11 +77,11 @@ describe('Toast', () => {
                 position: 'bottom'
             }
         }).$mount()
+        expect(vm.$el.classList.contains('position-bottom')).to.equal(true)
         setTimeout(() => {
-            expect(vm.$el.classList.contains('position-bottom')).to.equal(true)
             done()
             vm.$el.remove()
             vm.$destroy()
-        },0)
+        }, 0)
     })
 })
