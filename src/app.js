@@ -48,7 +48,7 @@ new Vue({
                         console.log('知道了')
                     }
                 },
-                autoClose: false,
+                autoClose: 1,
                 position:'bottom'
             })
         }

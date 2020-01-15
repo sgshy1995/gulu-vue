@@ -14,12 +14,11 @@ export default {
   name: "GToast",
   props: {
     autoClose: {
-      type: Boolean,
-      default: true
-    },
-    autoCloseDelay: {
-      type: Number,
-      default: 3
+      type: [Boolean, Number],
+      default: 3,
+      validator(value) {
+        return value === false || typeof value === "number";
+      }
     },
     closeButton: {
       type: Object,
@@ -65,7 +64,7 @@ export default {
       if (this.autoClose) {
         setTimeout(() => {
           this.close();
-        }, this.autoCloseDelay * 1000);
+        }, this.autoClose * 1000);
       }
     },
     close() {
@@ -108,18 +107,18 @@ export default {
   }
   @keyframes slide-down {
     0% {
-      transform: translate(-50%,-100%);
+      transform: translate(-50%, -100%);
     }
-    100%{
-      transform: translate(-50%,0%);
+    100% {
+      transform: translate(-50%, 0%);
     }
   }
   @keyframes slide-up {
-    0%{
-      transform: translate(-50%,100%)
+    0% {
+      transform: translate(-50%, 100%);
     }
-    100%{
-      transform: translate(-50%,0%)
+    100% {
+      transform: translate(-50%, 0%);
     }
   }
   &.position-top {
