@@ -41,7 +41,7 @@ new Vue({
     },
     methods: {
         showToast() {
-            this.$toast('Hello World', {
+            this.$toast(`Hello World ${parseInt(Math.random(1)*100)}`, {
                 closeButton: {
                     text: '关闭',
                     callback() {
