@@ -28,6 +28,9 @@ export default {
         return ["horizontal", "vertical"].indexOf(value) >= 0;
       }
     }
+  },
+  mounted(){
+      this.eventBus.$emit('update:selected',this.selected)
   }
 };
 </script>
