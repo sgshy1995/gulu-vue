@@ -1,5 +1,5 @@
 <template>
-  <div class="tabs-panel" :class="tabsClasses" v-if="active">
+  <div class="tabs-panel" :class="tabsClasses" v-if="active" :data-name="name">
     <slot></slot>
   </div>
 </template>
@@ -27,9 +27,11 @@ export default {
     }
   },
   created() {
-    this.eventBus.$on("update:selected", selected => {
-      this.active = this.name === selected;
-    });
+    if (this.eventBus) {
+      this.eventBus.$on("update:selected", selected => {
+        this.active = this.name === selected;
+      });
+    }
   }
 };
 </script>
@@ -38,7 +40,7 @@ export default {
 .tabs-panel {
   height: 40px;
   &.active {
-      padding: 1em;
+    padding: 1em;
   }
 }
 </style>
