@@ -12,6 +12,5 @@ export default {
 
 <style lang="scss" scoped>
 .tabs-body{
-    border: 1px solid black;
 }
 </style>

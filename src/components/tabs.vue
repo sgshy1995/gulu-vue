@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Vue from 'vue'
+import Vue from "vue";
 export default {
   name: "GTabs",
   data() {
@@ -29,8 +29,16 @@ export default {
       }
     }
   },
-  mounted(){
-      this.eventBus.$emit('update:selected',this.selected)
+  mounted() {
+    this.$children.forEach(vm => {
+      if (vm.$options.name === "GTabsHead") {
+        vm.$children.forEach(item => {
+          if (item.$options.propsData.name === this.selected) {
+            this.eventBus.$emit("update:selected", this.selected,item);
+          }
+        });
+      }
+    });
   }
 };
 </script>

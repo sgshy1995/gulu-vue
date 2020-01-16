@@ -37,7 +37,7 @@ export default {
   },
   methods: {
     xxx() {
-      this.eventBus.$emit("update:selected", this.name);
+      this.eventBus.$emit("update:selected", this.name,this);
     }
   }
 };
@@ -45,11 +45,15 @@ export default {
 
 <style lang="scss" scoped>
 .tabs-item {
+  $blue: #0078cf;
+  display: flex;
+  align-items: center;
   height: 40px;
   padding: 0.2em 2em;
   cursor: pointer;
   &.active {
-    background: gray;
+    color: $blue;
+    font-weight: bold;
   }
 }
 </style>
