@@ -12,6 +12,11 @@ import Content from './components/content'
 import Footer from './components/footer'
 import Toast from './components/toast'
 import plugin from './plugin'
+import Tabs from './components/tabs'
+import TabsItem from './components/tabs-item'
+import TabsBody from './components/tabs-body'
+import TabsHead from './components/tabs-head'
+import TabsPanel from './components/tabs-panel'
 
 Vue.component('g-button', Button)
 Vue.component('g-icon', Icon)
@@ -26,31 +31,20 @@ Vue.component('g-content', Content)
 Vue.component('g-footer', Footer)
 Vue.component('g-toast', Toast)
 Vue.use(plugin)
+Vue.component('g-tabs', Tabs)
+Vue.component('g-tabs-item', TabsItem)
+Vue.component('g-tabs-body', TabsBody)
+Vue.component('g-tabs-head', TabsHead)
+Vue.component('g-tabs-panel',TabsPanel)
 
 new Vue({
     el: '#app',
     data() {
         return {
-            loading1: true,
-            loading2: false,
-            loading3: true,
-            message: '支持双向绑定'
         }
     },
     created() {
     },
     methods: {
-        showToast() {
-            this.$toast(`Hello World ${parseInt(Math.random(1)*100)}`, {
-                closeButton: {
-                    text: '关闭',
-                    callback() {
-                        console.log('知道了')
-                    }
-                },
-                autoClose: 1,
-                position:'bottom'
-            })
-        }
     }
 })
