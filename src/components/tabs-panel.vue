@@ -38,7 +38,7 @@ export default {
 .tabs-panel {
   height: 40px;
   &.active {
-    background: darkcyan;
+      padding: 1em;
   }
 }
 </style>
