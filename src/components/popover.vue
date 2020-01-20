@@ -1,6 +1,6 @@
 <template>
-  <div class="popover" @click.stop="xxx">
-    <div class="content-wrapper" ref="contentWrapper" v-if="visible" @click.stop>
+  <div class="popover" @click="onClick" ref="popover">
+    <div class="content-wrapper" ref="contentWrapper" v-if="visible">
       <slot name="content"></slot>
     </div>
     <div ref="triggerWrapper" class="trigger-wrapper">
@@ -18,26 +18,40 @@ export default {
     };
   },
   methods: {
-    xxx() {
+    positionContent() {
+      document.body.appendChild(this.$refs.contentWrapper);
+      let {
+        width,
+        height,
+        top,
+        left
+      } = this.$refs.triggerWrapper.getBoundingClientRect();
+      this.$refs.contentWrapper.style.top = `${top + window.scrollY}px`;
+      this.$refs.contentWrapper.style.left = `${left + window.scrollX}px`;
+    },
+    listenToDocument() {
+      let eventHandler = e => {
+        if (
+          this.$refs.contentWrapper &&
+          (this.$refs.contentWrapper === e.target ||
+            this.$refs.contentWrapper.contains(e.target))
+        ) {
+          return;
+        }
+        this.visible = false;
+        document.removeEventListener("click", eventHandler);
+      };
+      document.addEventListener("click", eventHandler);
+    },
+    onClick(e) {
       this.visible = !this.visible;
-      if (this.visible === true) {
-        this.$nextTick(() => {
-          let content = this.$refs.contentWrapper;
-          document.body.appendChild(content);
-          let {
-            width,
-            height,
-            top,
-            left
-          } = this.$refs.triggerWrapper.getBoundingClientRect();
-          content.style.top = `${top}px`
-          content.style.left = `${left}px`
-          let eventHandler = () => {
-            this.visible = false;
-            document.removeEventListener("click", eventHandler);
-          };
-          document.addEventListener("click", eventHandler);
-        });
+      if (this.$refs.triggerWrapper.contains(e.target)) {
+        if (this.visible === true) {
+          setTimeout(() => {
+            this.positionContent();
+            this.listenToDocument();
+          });
+        }
       }
     }
   }
