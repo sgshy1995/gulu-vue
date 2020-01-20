@@ -38,18 +38,20 @@
 
 <body>
     <div id="app" style="padding: 100px;">
-        <g-popover>
-            <template slot="content">
-                <div>浮层信息1</div>
-            </template>
-            <button>点我1</button>
-        </g-popover>
-        <g-popover>
-            <template slot="content">
-                <div>浮层信息2</div>
-            </template>
-            <button>点我2</button>
-        </g-popover>
+        <div style="overflow: hidden; padding: 20px; border: 1px solid red;">
+            <g-popover>
+                <template slot="content">
+                    <div>浮层信息1</div>
+                </template>
+                <button>点我1</button>
+            </g-popover>
+            <g-popover>
+                <template slot="content">
+                    <div>浮层信息2</div>
+                </template>
+                <button>点我2</button>
+            </g-popover>
+        </div>
     </div>
     <script src="src/app.js"></script>
 </body>

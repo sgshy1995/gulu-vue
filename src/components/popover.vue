@@ -1,9 +1,11 @@
 <template>
   <div class="popover" @click.stop="xxx">
-    <div class="content-wrapper" v-if="visible" @click.stop>
+    <div class="content-wrapper" ref="contentWrapper" v-if="visible" @click.stop>
       <slot name="content"></slot>
     </div>
-    <slot></slot>
+    <div ref="triggerWrapper" class="trigger-wrapper">
+      <slot></slot>
+    </div>
   </div>
 </template>
 
@@ -19,7 +21,17 @@ export default {
     xxx() {
       this.visible = !this.visible;
       if (this.visible === true) {
-        setTimeout(() => {
+        this.$nextTick(() => {
+          let content = this.$refs.contentWrapper;
+          document.body.appendChild(content);
+          let {
+            width,
+            height,
+            top,
+            left
+          } = this.$refs.triggerWrapper.getBoundingClientRect();
+          content.style.top = `${top}px`
+          content.style.left = `${left}px`
           let eventHandler = () => {
             this.visible = false;
             document.removeEventListener("click", eventHandler);
@@ -38,11 +50,10 @@ export default {
   position: relative;
   vertical-align: middle;
   margin: 0 20px;
-  .content-wrapper {
-    position: absolute;
-    bottom: 100%;
-    left: 0;
-    border: 1px solid red;
-  }
+}
+.content-wrapper {
+  position: absolute;
+  border: 1px solid red;
+  transform: translateY(-100%);
 }
 </style>
