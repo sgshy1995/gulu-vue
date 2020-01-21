@@ -43,10 +43,14 @@ new Vue({
     el: '#app',
     data() {
         return {
+            loading1: true
         }
     },
     created() {
     },
     methods: {
+        sgs1() {
+            console.log(1)
+        }
     }
 })
