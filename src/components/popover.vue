@@ -33,29 +33,35 @@ export default {
   },
   methods: {
     positionContent() {
-      document.body.appendChild(this.$refs.contentWrapper);
-      let {
+      const {contentWrapper} = this.$refs;
+      document.body.appendChild(contentWrapper);
+      const {
         width,
         height,
         top,
         left
       } = this.$refs.triggerWrapper.getBoundingClientRect();
-      let content = this.$refs.contentWrapper;
-      let heightContent = content.getBoundingClientRect().height;
-      if (content.classList.contains("position-bottom")) {
-        content.style.top = `${top + window.scrollY + height}px`;
-        content.style.left = `${left + window.scrollX}px`;
-      } else if (content.classList.contains("position-left")) {
-        content.style.top = `${top + window.scrollY + (height-heightContent)/2}px`;
-        content.style.left = `${left + window.scrollX}px`;
-      } else if(content.classList.contains("position-right")){
-        content.style.top = `${top + window.scrollY + (height-heightContent)/2}px`;
-        content.style.left = `${left + window.scrollX + width}px`;
-      }
-      else {
-        content.style.top = `${top + window.scrollY}px`;
-        content.style.left = `${left + window.scrollX}px`;
-      }
+      const heightContent = contentWrapper.getBoundingClientRect().height;
+      let positions = {
+        top: {
+          top: top + window.scrollY,
+          left: left + window.scrollX
+        },
+        bottom: {
+          top: top + window.scrollY + height,
+          left: left + window.scrollX
+        },
+        left: {
+          top: top + window.scrollY + (height - heightContent) / 2,
+          left: left + window.scrollX
+        },
+        right: {
+          top: top + window.scrollY + (height - heightContent) / 2,
+          left:left + window.scrollX + width
+        }
+      };
+      contentWrapper.style.top = positions[this.position].top + 'px'
+      contentWrapper.style.left = positions[this.position].left + 'px'
     },
     listenToDocument() {
       let eventHandler = e => {
