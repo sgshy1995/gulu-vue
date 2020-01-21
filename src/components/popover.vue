@@ -33,7 +33,7 @@ export default {
   },
   methods: {
     positionContent() {
-      const {contentWrapper} = this.$refs;
+      const { contentWrapper } = this.$refs;
       document.body.appendChild(contentWrapper);
       const {
         width,
@@ -57,34 +57,39 @@ export default {
         },
         right: {
           top: top + window.scrollY + (height - heightContent) / 2,
-          left:left + window.scrollX + width
+          left: left + window.scrollX + width
         }
       };
-      contentWrapper.style.top = positions[this.position].top + 'px'
-      contentWrapper.style.left = positions[this.position].left + 'px'
+      contentWrapper.style.top = positions[this.position].top + "px";
+      contentWrapper.style.left = positions[this.position].left + "px";
     },
-    listenToDocument() {
-      let eventHandler = e => {
-        if (
-          this.$refs.contentWrapper &&
-          (this.$refs.contentWrapper === e.target ||
-            this.$refs.contentWrapper.contains(e.target))
-        ) {
-          return;
-        }
-        this.visible = false;
-        document.removeEventListener("click", eventHandler);
-      };
-      document.addEventListener("click", eventHandler);
+    onClickDocument(e) {
+      if (
+        this.$refs.contentWrapper &&
+        (this.$refs.contentWrapper === e.target ||
+          this.$refs.contentWrapper.contains(e.target))
+      ) {
+        return;
+      }
+      this.onClose();
+    },
+    onOpen() {
+      this.visible = true;
+      setTimeout(() => {
+        this.positionContent();
+        document.addEventListener("click", this.onClickDocument);
+      });
+    },
+    onClose() {
+      this.visible = false;
+      document.removeEventListener("click", this.onClickDocument);
     },
     onClick(e) {
-      this.visible = !this.visible;
       if (this.$refs.triggerWrapper.contains(e.target)) {
         if (this.visible === true) {
-          setTimeout(() => {
-            this.positionContent();
-            this.listenToDocument();
-          });
+          this.onClose();
+        } else {
+          this.onOpen();
         }
       }
     }
