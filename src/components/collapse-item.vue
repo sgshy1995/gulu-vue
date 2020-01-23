@@ -20,35 +20,30 @@ export default {
       type: String,
       required: true
     },
-    name:{
-      type: [String,Number],
-      required:true
+    name: {
+      type: [String, Number],
+      required: true
     }
   },
-  inject:['eventBus'],
-  methods:{
-      toggle(){
-          if(this.open){
-              this.open = false
-          }else{
-              this.eventBus && this.eventBus.$emit('update:selected',this.name)
-          }
-      },
-      close(){
-          this.open = false
-      },
-      show(){
-        this.open = true
+  inject: ["eventBus"],
+  methods: {
+    toggle() {
+      if (this.open) {
+        this.eventBus && this.eventBus.$emit("update:removeSelected", this.name);
+      } else {
+        this.eventBus && this.eventBus.$emit("update:addSelected", this.name);
       }
+    }
   },
-  mounted(){
-      this.eventBus && this.eventBus.$on('update:selected',(name)=>{
-          if(name!==this.name){
-              this.close()
-          }else{
-            this.show()
-          }
-      })
+  mounted() {
+    this.eventBus &&
+      this.eventBus.$on("update:selected", names => {
+        if (names.indexOf(this.name) >= 0) {
+          this.open = true
+        } else {
+          this.open = false
+        }
+      });
   }
 };
 </script>
