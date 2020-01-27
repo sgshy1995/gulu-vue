@@ -4,6 +4,8 @@ title: 默认布局组件
 
 # 默认布局组件
 
+默认布局UI 用于快速布置页面的布局，根据计划功能分配可用空间。
+
 ## 引入
 
 ```js
@@ -44,6 +46,22 @@ new Vue({
 
 一般的上中下布局。
 
+应当按照以下结构来使用它：
+
+```
+g-layout   
+│
+└───g-header               
+│   
+└───g-content   
+│     
+└───g-footer                
+│ 
+...  
+```
+
+在页面中引入：
+
 ```html
 <g-layout>
     <g-header>Header</g-header>
@@ -61,6 +79,26 @@ new Vue({
 ### 滑层在中
 
 将滑层放在头尾之间，与内容区并排。
+
+应当按照以下结构来使用它：
+
+```
+g-layout   
+│
+└───g-header               
+│   
+└───g-layout   
+│   │
+│   └────g-sider
+│   │
+│   └────g-content   
+│     
+└───g-footer                
+│ 
+...  
+```
+
+在页面中引入：
 
 ```html
 <g-layout>
@@ -83,6 +121,26 @@ new Vue({
 ### 滑层在外
 
 将滑层放在头尾以及内容区之外。
+
+应当按照以下结构来使用它：
+
+```
+g-layout   
+│
+└───g-sider               
+│   
+└───g-layout   
+│   │
+│   └────g-header
+│   │
+│   └────g-content   
+│   │
+│   └────g-footer                
+│ 
+...  
+```
+
+在页面中引入：
 
 ```html
 <g-layout>

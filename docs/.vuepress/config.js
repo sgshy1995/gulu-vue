@@ -13,25 +13,26 @@ module.exports = {
             {
                 title: '说明',   // 必要的
                 path: '/home/',      // 可选的, 应该是一个绝对路径
-                collapsable: false, // 可选的, 默认值是 true,
+                collapsable: true, // 可选的, 默认值是 true,
                 sidebarDepth: 1,    // 可选的, 默认值是 1
             },
             {
                 title: '开始安装',
                 path: '/install/',
-                collapsable: false,
-                children: [ /* ... */]
+                collapsable: true,
+                sidebarDepth: 1
             },
             {
                 title: '使用组件',
                 path: '/components/',
-                collapsable: false,
+                collapsable: true,
+                sidebarDepth: 1,
                 children: [
                     '/components/button',
                     '/components/button-group',
                     '/components/input',
-                    '/components/row-and-col',
                     '/components/layout',
+                    '/components/row-and-col',
                     '/components/toast',
                     '/components/tabs',
                     '/components/popover',
