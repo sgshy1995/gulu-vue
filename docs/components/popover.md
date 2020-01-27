@@ -128,6 +128,10 @@ popover 组件还支持设置 `trigger` 属性，有两个值 `click` 和 `hover
 与 click 状态的唯一区别就是：hover 态是不支持你鼠标滑入弹出层的，它将会在你的鼠标离开触发器关闭。
 :::
 
+::: danger 警告
+因为移动端并没有 hover 事件，所以该组件在设置 trigger="hover" 后，应该配合媒体查询或动态传值来使用。否则可能会引起组件在移动端上的功能和样式的一些问题。
+:::
+
 ```html
 <g-popover position="top" trigger="hover">
   <template #content>
@@ -144,7 +148,7 @@ popover 组件还支持设置 `trigger` 属性，有两个值 `click` 和 `hover
 </g-popover>
 ```
 
-效果如下：
+效果如下 (在移动端没有此功能)：
 
 <ClientOnly>
 <popover-demo-hover></popover-demo-hover>
