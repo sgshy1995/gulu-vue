@@ -54,9 +54,9 @@ new Vue({
 
 效果如下：
 
+<ClientOnly>
 <layout-demo-nosider></layout-demo-nosider>
-
-
+</ClientOnly>
 
 ### 滑层在中
 
@@ -76,7 +76,9 @@ new Vue({
 
 效果如下：
 
+<ClientOnly>
 <layout-demo-insider></layout-demo-insider>
+</ClientOnly>
 
 ### 滑层在外
 
@@ -95,5 +97,6 @@ new Vue({
 
 效果如下：
 
+<ClientOnly>
 <layout-demo-outsider></layout-demo-outsider>
-
+</ClientOnly>

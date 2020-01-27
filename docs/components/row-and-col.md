@@ -52,7 +52,9 @@ new Vue({
         <div class="col-two">2</div>
     </g-col>
 </g-row>
+
 <br>
+
 <g-row>
     <g-col span="8">
         <div class="col-one">1</div>
@@ -64,7 +66,9 @@ new Vue({
         <div class="col-one">3</div>
     </g-col>
 </g-row>
+
 <br>
+
 <g-row>
     <g-col span="6">
         <div class="col-one">1</div>
@@ -79,7 +83,9 @@ new Vue({
         <div class="col-two">4</div>
     </g-col>
 </g-row>
+
 <br>
+
 <g-row>
     <g-col span="2">
         <div class="col-one">1</div>
@@ -101,7 +107,9 @@ new Vue({
 
 样式如下：
 
+<ClientOnly>
 <row-and-col-demo-24></row-and-col-demo-24>
+</ClientOnly>
 
 ## 设置间距
 
@@ -119,7 +127,9 @@ new Vue({
         <div class="col-one">3</div>
     </g-col>
 </g-row>
+
 <br>
+
 <g-row gutter="10">
     <g-col span="6">
         <div class="col-one">1</div>
@@ -138,7 +148,9 @@ new Vue({
 
 样式如下：
 
+<ClientOnly>
 <row-and-col-demo-gutter></row-and-col-demo-gutter>
+</ClientOnly>
 
 ## 设置偏移
 
@@ -156,7 +168,9 @@ new Vue({
         <div class="col-one">3</div>
     </g-col>
 </g-row>
+
 <br>
+
 <g-row>
     <g-col span="6">
         <div class="col-one">1</div>
@@ -175,4 +189,6 @@ new Vue({
 
 效果如下：
 
+<ClientOnly>
 <row-and-col-demo-offset></row-and-col-demo-offset>
+</ClientOnly>

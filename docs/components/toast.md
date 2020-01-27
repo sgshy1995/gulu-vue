@@ -79,7 +79,9 @@ new Vue({
 
 以下分别为：长时间展示在顶部、加粗标签展示在中间、默认内容展示在底部。
 
+<ClientOnly>
 <toast-demo-default></toast-demo-default>
+</ClientOnly>
 
 ## 设置关闭按钮
 
@@ -110,4 +112,6 @@ new Vue({
 
 点击提示弹窗：
 
+<ClientOnly>
 <toast-demo-closebutton></toast-demo-closebutton>
+</ClientOnly>

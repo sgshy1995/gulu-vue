@@ -69,7 +69,9 @@ g-tabs
 
 效果如下：
 
+<ClientOnly>
 <tabs-demo-default></tabs-demo-default>
+</ClientOnly>
 
 ## 设置不可选
 
@@ -101,6 +103,7 @@ g-tabs-item 接受 `disabled` 属性，表示当前的 item 为不可选取状�
 
 样式如下：
 
+<ClientOnly>
 <tabs-demo-disabled></tabs-demo-disabled>
-
+</ClientOnly>
 

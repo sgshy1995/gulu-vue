@@ -86,7 +86,9 @@ popover 组件接受一个 `position` 属性来决定弹出框相对于触发器
 
 样式如下：
 
+<ClientOnly>
 <popover-demo-default></popover-demo-default>
+</ClientOnly>
 
 ## 设置关闭按钮
 
@@ -114,7 +116,9 @@ popover 组件接受一个 `position` 属性来决定弹出框相对于触发器
 
 样式如下：
 
+<ClientOnly>
 <popover-demo-close></popover-demo-close>
+</ClientOnly>
 
 ## 设置 hover 状态
 
@@ -142,4 +146,6 @@ popover 组件还支持设置 `trigger` 属性，有两个值 `click` 和 `hover
 
 效果如下：
 
+<ClientOnly>
 <popover-demo-hover></popover-demo-hover>
+</ClientOnly>

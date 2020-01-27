@@ -14,6 +14,6 @@ title: 组件
 - [吐司组件](toast.md)
 - [切换tabs组件](tabs.md)
 - [弹出框组件](popover.md)
-- [手风琴组件]()
+- [手风琴组件](collapse.md)
   
 下面对于每种组件作出详细的阐述。

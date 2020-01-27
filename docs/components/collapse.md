@@ -75,7 +75,9 @@ new Vue({
 
 默认展示第一、二项，效果如下：
 
+<ClientOnly>
 <collapse-demo-default></collapse-demo-default>
+</ClientOnly>
 
 ## 单项展示
 
@@ -104,5 +106,6 @@ new Vue({
 
 默认展开第三项，且只可以单项展示：
 
+<ClientOnly>
 <collapse-demo-single></collapse-demo-single>
-
+</ClientOnly>

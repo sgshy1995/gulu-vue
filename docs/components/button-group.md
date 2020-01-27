@@ -36,4 +36,6 @@ new Vue({
 
 样式如下：
 
+<ClientOnly>
 <button-group-demo-default></button-group-demo-default>
+</ClientOnly>

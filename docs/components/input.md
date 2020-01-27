@@ -26,7 +26,9 @@ new Vue({
 
 样式如下：
 
+<ClientOnly>
 <input-demo-default></input-demo-default>
+</ClientOnly>
 
 ## 常用属性
 
@@ -44,7 +46,9 @@ new Vue({
 
 样式如下：
 
+<ClientOnly>
 <input-demo-property></input-demo-property>
+</ClientOnly>
 
 ## 提示信息
 
@@ -57,7 +61,9 @@ new Vue({
 
 样式如下：
 
+<ClientOnly>
 <input-demo-message></input-demo-message>
+</ClientOnly>
 
 ::: tip 提示
 这也就意味着你可以使用事件，通过改变 `error` 和 `info` 来控制提示信息是否出现，以及在恰当的时机出现。这里不予举例。

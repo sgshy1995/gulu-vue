@@ -25,7 +25,9 @@ new Vue({
 
 你将会在当前位置看到一个初始的 button 按钮。
 
+<ClientOnly>
 <button-demo-default></button-demo-default>
+</ClientOnly>
 
 button 组件提供了很多的可选属性。
 
@@ -44,7 +46,9 @@ iconPosition 默认的位置在左边，你只可以设置两种：`left` 或 `r
 
 效果如下：
 
+<ClientOnly>
 <button-demo-icon></button-demo-icon>
+</ClientOnly>
 
 ## 设置加载动画
 
@@ -70,6 +74,7 @@ new Vue({
 
 效果如下：
 
+<ClientOnly>
 <button-demo-settings></button-demo-settings>
-
+</ClientOnly>
 
