@@ -14,7 +14,7 @@ export default {
     align: {
       type: [String],
       validator(value) {
-        return ["left", "right", "center"].indexOf(value)>=0
+        return ["left", "right", "center"].indexOf(value) >= 0;
       }
     }
   },
@@ -42,14 +42,14 @@ export default {
 <style lang="scss" scoped>
 .row {
   display: flex;
-  flex-wrap: wrap;
-  &.align-right{
+  flex-wrap: nowrap;
+  &.align-right {
     justify-content: flex-end;
   }
-  &.align-left{
+  &.align-left {
     justify-content: flex-start;
   }
-  &.align-center{
+  &.align-center {
     justify-content: center;
   }
 }

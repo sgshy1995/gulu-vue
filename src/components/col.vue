@@ -86,8 +86,7 @@ export default {
 <style lang="scss" scoped>
 .col {
   height: 50px;
-  background: gray;
-  border: 1px solid black;
+  background: white;
   $class-prefix: col-;
   @for $n from 1 through 24 {
     &.#{$class-prefix}#{$n} {

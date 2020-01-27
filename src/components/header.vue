@@ -12,7 +12,9 @@ export default {
 
 <style lang="scss" scoped>
 .header{
-    height: 100px;
-    background: #999;
+    min-height: 30px;
+    background: #3AB982;
+    display: flex;
+    align-items: center;
 }
 </style>

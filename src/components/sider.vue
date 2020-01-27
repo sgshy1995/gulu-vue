@@ -2,7 +2,7 @@
   <transition name="slide">
     <div class="sider" v-if="visible">
       <slot></slot>
-      <button @click="hide" :class="{trans}">隐 藏</button>
+      <button @click="hide" :class="{trans}" v-if="show">隐 藏</button>
     </div>
   </transition>
 </template>
@@ -16,6 +16,12 @@ export default {
       trans: false
     };
   },
+  props:{
+    show:{
+      type: Boolean,
+      default:false
+    }
+  },
   methods:{
       hide(){
           this.visible = !this.visible
@@ -28,7 +34,7 @@ export default {
 <style lang="scss" scoped>
 .sider {
   width: 150px;
-  background: #333;
+  background: rgb(68, 97, 128);
   position: relative;
   > button {
     position: absolute;

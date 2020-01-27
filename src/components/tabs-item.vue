@@ -57,11 +57,13 @@ export default {
   display: flex;
   align-items: center;
   height: 40px;
-  padding: 0.2em 1.5em;
+  padding: 0.2em 1em;
+  @media (max-width:576px) {
+    padding: 0.2em 0.5em;
+  }
   cursor: pointer;
   &.active {
     color: $blue;
-    font-weight: bold;
   }
   &.disabled {
     color: $grey;

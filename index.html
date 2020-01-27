@@ -17,7 +17,6 @@
 
         body {
             font-size: var(--font-size);
-            border: 1px solid black;
         }
 
         :root {
@@ -37,7 +36,7 @@
 </head>
 
 <body>
-    <div id="app" style="padding: 100px 300px;">
+    <div id="app" style="margin: 100px">
         <g-collapse :selected.sync="selectedTabs">
             <g-collapse-item title="标题一" name="1">内容一</g-collapse-item>
             <g-collapse-item title="标题二" name="2">内容二</g-collapse-item>
@@ -46,6 +45,146 @@
         <div class="test" style="padding: 40px;">
             {{selectedTabs}}
         </div>
+<!--         <g-input error="姓名不能为空"></g-input>
+        <br>
+        <br>
+        <g-input info="你可以输入中文"></g-input>
+ -->
+        <!--         <g-row>
+            <g-col span="12">
+                <div style="background: #3AB982;width: 100%; height: 100%;">1</div>
+            </g-col>
+            <g-col span="12">
+                <div style="background: #34495F;width: 100%; height: 100%;">2</div>
+            </g-col>
+        </g-row>
+        <br>
+        <g-row>
+            <g-col span="8">
+                <div style="background: #3AB982;width: 100%; height: 100%;">1</div>
+            </g-col>
+            <g-col span="8">
+                <div style="background: #3AB982;width: 100%; height: 100%;">2</div>
+            </g-col>
+            <g-col span="8">
+                <div style="background: #3AB982;width: 100%; height: 100%;">3</div>
+            </g-col>
+        </g-row>
+        <br>
+        <g-row>
+            <g-col span="5">
+                <div style="background: #3AB982;width: 100%; height: 100%;">1</div>
+            </g-col>
+            <g-col span="5" offset="4">
+                <div style="background: #3AB982;width: 100%; height: 100%;">2</div>
+            </g-col>
+            <g-col span="5">
+                <div style="background: #3AB982;width: 100%; height: 100%;">3</div>
+            </g-col>
+            <g-col span="5">
+                <div style="background: #3AB982;width: 100%; height: 100%;">4</div>
+            </g-col>
+        </g-row>
+        <br>
+        <g-row gutter="10">
+            <g-col span="12">
+                <div style="background: #3AB982;width: 100%; height: 100%;">1</div>
+            </g-col>
+            <g-col span="12">
+                <div style="background: #3AB982;width: 100%; height: 100%;">2</div>
+            </g-col>
+        </g-row>
+ -->
+        <!--         <g-layout>
+            <g-header>Header</g-header>
+            <g-layout>
+                <g-sider>Sider</g-sider>
+                <g-content>Content</g-content>
+            </g-layout>
+            <g-footer>Footer</g-footer>
+        </g-layout>
+        <br>
+        <g-layout>
+            <g-sider>Sider</g-sider>
+            <g-layout>
+                <g-header>Header</g-header>
+                <g-content>Content</g-content>
+                <g-footer>Footer</g-footer>
+            </g-layout>
+        </g-layout>
+        <br>
+        <g-layout>
+            <g-header>Header</g-header>
+            <g-content>Content</g-content>
+            <g-footer>Footer</g-footer>
+        </g-layout>-->
+        <!--         <g-tabs  selected="1" style="border: 1px solid #2c3e50;border-radius:4px">
+            <g-tabs-head>
+                <template slot="actions">
+                    <button>设置</button>
+                </template>
+                <g-tabs-item name="1">1</g-tabs-item>
+                <g-tabs-item name="2">2</g-tabs-item name="1">
+                <g-tabs-item name="3">3</g-tabs-item>
+            </g-tabs-head>
+            <g-tabs-body>
+                <g-tabs-panel name="1">1</g-tabs-panel name="1">
+                <g-tabs-panel name="2">2</g-tabs-panel name="1">
+                <g-tabs-panel name="3">3</g-tabs-panel name="1">
+                </g-tabs-body>      
+                </g-tabs>-->
+<!--         <g-popover position="top">
+            <template #content>
+                <div>上方弹出内容!</div>
+            </template>
+            <g-button>上面</g-button>
+        </g-popover>
+        <g-popover position="bottom">
+            <template #content>
+                <div>下方弹出内容!</div>
+            </template>
+            <g-button>下面</g-button>
+        </g-popover>
+        <g-popover position="top" trigger="hover">
+            <template #content>
+                <div>上方弹出内容!</div>
+            </template>
+            <g-button>上面</g-button>
+        </g-popover>
+        <g-popover position="bottom" trigger="hover">
+            <template #content>
+                <div>下方弹出内容!</div>
+            </template>
+            <g-button>下面</g-button>
+        </g-popover>
+        <g-popover position="top">
+            <template #content="{close}">
+                <div>上方弹出内容!</div>
+                <g-button @click.native="close">关闭</g-button>
+            </template>
+            <g-button>上面</g-button>
+        </g-popover>
+        <g-popover position="bottom">
+            <template #content="{close}">
+                <div>下方弹出内容!</div>
+                <g-button @click.native="close">关闭</g-button>
+            </template>
+            <g-button>下面</g-button>
+        </g-popover>
+        <g-popover position="left">
+            <template #content="{close}">
+                <div>左侧弹出内容!</div>
+                <g-button @click.native="close">关闭</g-button>
+            </template>
+            <g-button>左面</g-button>
+        </g-popover>
+        <g-popover position="right">
+            <template #content="{close}">
+                <div>右侧弹出内容!</div>
+                <g-button @click.native="close">关闭</g-button>
+            </template>
+            <g-button>右面</g-button>
+        </g-popover>-->    
     </div>
     <script src="src/app.js"></script>
 </body>

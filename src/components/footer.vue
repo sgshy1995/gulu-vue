@@ -12,7 +12,9 @@ export default {
 
 <style lang="scss" scoped>
 .footer{
-    background: #ccc;
-    height: 100px;
+    background: #3AB982;
+    min-height: 30px;
+    display: flex;
+    align-items: center;
 }
 </style>

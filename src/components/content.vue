@@ -13,5 +13,6 @@ export default {
 <style lang="scss" scoped>
 .content{
     flex-grow: 1;
+    background: #34495F;
 }
 </style>

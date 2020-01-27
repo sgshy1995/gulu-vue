@@ -1,5 +1,5 @@
 <template>
-  <div class="tabs-head">
+  <div class="tabs-head" ref="head">
     <slot></slot>
     <div class="line" ref="line"></div>
     <div class="actions-wrapper">
@@ -16,8 +16,9 @@ export default {
   mounted(){
     this.eventBus.$on('update:selected',(selected,vm)=>{
       let {height,width,top,left}=vm.$el.getBoundingClientRect()
+      let {height:height2,width:width2,top:top2,left:left2}=this.$refs.head.getBoundingClientRect()
       this.$refs.line.style.width = `${width}px`
-      this.$refs.line.style.left=`${left}px`
+      this.$refs.line.style.left=`${left-left2}px`
     })
   }
 };
@@ -42,6 +43,7 @@ export default {
       cursor: pointer;
       border: 1px solid $blue;
       color: $blue;
+      background: white;
       &:focus{
         outline: none;
       }

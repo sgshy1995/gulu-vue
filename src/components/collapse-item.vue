@@ -65,7 +65,7 @@ $border-radius: 4px;
     }
   }
   .title {
-    padding: 0.5em;
+    padding: 0 0.5em;
     cursor: pointer;
     border: 1px solid $grey;
     margin: -1px;

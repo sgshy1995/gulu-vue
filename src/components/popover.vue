@@ -6,7 +6,7 @@
       v-if="visible"
       :class="[`position-${position}`]"
     >
-      <slot name="content" :sgs="onClose"></slot>
+      <slot name="content" :close="onClose"></slot>
     </div>
     <div ref="triggerWrapper" class="trigger-wrapper">
       <slot></slot>
@@ -19,7 +19,7 @@ export default {
   name: "GPopover",
   data() {
     return {
-      visible: false,
+      visible: false
     };
   },
   props: {
@@ -103,8 +103,8 @@ export default {
         document.addEventListener("click", this.onClickDocument);
       });
     },
-    xxx(){
-      console.log('xyz')
+    xxx() {
+      console.log("xyz");
     },
     onClose() {
       this.visible = false;
@@ -128,9 +128,10 @@ export default {
   display: inline-block;
   position: relative;
   vertical-align: middle;
-  margin: 0 20px;
+  margin: 0.5em;
 }
 .content-wrapper {
+  z-index: 21;
   position: absolute;
   border: 1px solid #333;
   border-radius: 4px;

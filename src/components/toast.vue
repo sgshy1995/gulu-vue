@@ -97,6 +97,7 @@ export default {
   align-items: center;
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
   text-align: center;
+  z-index: 30;
   @keyframes fade-in {
     0% {
       opacity: 0;
