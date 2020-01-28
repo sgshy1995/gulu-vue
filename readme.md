@@ -11,7 +11,7 @@
 
 美观、大方、实用。
 
-详情请参阅 [官方文档](https://eden-sheng.cn/eden-gulu)。
+详情请参阅 [官方文档](https://eden-sheng.cn/gulu-vue/)。
 
 ## 开始使用
 
@@ -85,7 +85,7 @@ export default {
 
 ## 文档
 
-如果你想深入了解并快速上手本组件，请参阅 [官网](https://eden-sheng.cn/eden-gulu) 或上面给出的预览链接。
+如果你想深入了解并快速上手本组件，请参阅 [官网](https://eden-sheng.cn/gulu-vue/) 或上面给出的预览链接。
 
 ##  提问
 
