@@ -1,4 +1,4 @@
-# 轱辘（Vue 轮子）
+# Eden-Gulu（Vue 造轮子）
 
 [![Build Status](https://travis-ci.org/sgshy1995/gulu-vue.svg?branch=master)](https://travis-ci.org/sgshy1995/gulu-vue)
 [![npm](https://img.shields.io/npm/v/eden-gulu)](https://www.npmjs.com/package/eden-gulu)
@@ -7,13 +7,29 @@
 
 ## 介绍
 
-自制简易版 UI 框架
+自制 Vue UI 框架。
 
 ## 开始使用
 
 ### 安装
 
-#### 默认样式
+如果你想体验 Eden-Gulu，推荐你进行全局安装:
+
+```sh
+# 全局安装
+yarn global add eden-gulu  # 或者： npm install global eden-gulu
+```
+
+推荐在项目中使用 yarn 安装：
+
+```bash
+# 项目安装
+yarn add -D eden-gulu  # 或者： npm install -D eden-gulu
+```
+
+我们推荐你全部使用 `yarn` 来代替 `npm` 在你的项目中。
+
+### 默认样式
 
 首先，如果你使用本框架中的任意组件，
 请设置 CSS 样式 `border-box`。
@@ -26,55 +42,28 @@ Tips:
 
 IE8 及以上浏览器支持此样式。
 
-你还需要设置一些默认变量来引入组件的样式（后续会改为 SCSS 变量）。
-
-```css
-:root {
-  --border: 1px solid;
-  --button-height: 32px;
-  --font-size: 14px;
-  --button-background: white;
-  --button-active-background: #eee;
-  --border-radius: 4px;
-  --color: #333;
-  --border-color: #999;
-  --border-color-hover: #666;
-}
-```
-
-IE15 及以上浏览器支持此样式。
-
 你还需引入该框架中的 css 文件（后续会优化）。在 main.js 或所需组件中引入：
 
 ```js
 import 'eden-gulu/dist/index.css'
 ```
 
-#### 安装 eden-gulu
+### 引入 eden-gulu
 
-推荐在项目中使用 yarn 安装：
-
-```bash
-yarn add eden-gulu
-```
-
-#### 引入 eden-gulu
-
-在 Vue 组件中引入：
+比如在 Vue 组件中引入 按钮组件：
 
 ```js
-import {Button,ButtonGroup,Icon} from 'eden-gulu'
+import {Button} from 'eden-gulu'
+
 export default {
   name: 'app',
   components: {
-    'g-button': Button,
-    'g-icon': Icon,
-    'g-button-group': ButtonGroup
+    'g-button': Button
   }
 }
 ```
 
-#### 关于 parcel
+### 关于 parcel
 
 很多组件使用了自闭合标签。
 
@@ -92,11 +81,31 @@ export default {
 
 ## 文档
 
+如果你想深入了解并快速上手本组件，请参阅 [官网](https://github.com/sgshy1995/eden-gulu) 或上面给出的预览链接。
+
 ##  提问
+
+***Q:*** 本组件在何种环境下使用？
+
+***A:*** 因为组件本身是使用 Vue 框架编写，所以仅支持使用 Vue 进行开发的项目。
+
+***Q:*** 本组件适用于何种页面？
+
+***A:*** 任何页面都可以，无论是 PC 还是 移动端，都做了很好的适配；无论静态页面或动态页面，因为组件大多都是基础组件，所以从你项目搭建开始都是实用的。
+
+
 
 ## 变更记录
 
+- 2020-01-08 开始立项。
+- 2020-01-09 正式发布 V 1.1.0 版本。
+
 ## 联系方式
+
+- Email: singlesaulwork@gmail.com
+- [个人博客](http://eden-sheng.cn)
+- [知乎](https://www.zhihu.com/people/ming-ji-yisheng-88)
+
 
 ## 贡献代码
 
