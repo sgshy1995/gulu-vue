@@ -28,3 +28,19 @@ yarn global add eden-gulu # 或者： npm install global eden-gulu
 ```sh
 # 项目安装
 yarn add -D eden-gulu # 或者： npm install -D eden-gulu
+```
+
+## 引入 css 样式
+
+使用该组件，有一些CSS样式上的需求。
+
+请引入 css 文件来实现组件的样式，这是 ***必须*** 的：
+```js
+import 'eden-gulu/dist/index.css'
+```
+
+同时，推荐你设置CSS样式 `border-box`，这是 ***推荐*** 的：
+
+```css
+*,*::before,*::after{box-sizing: border-box;}
+```
