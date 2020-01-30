@@ -79,6 +79,8 @@ new Vue({
 <collapse-demo-default></collapse-demo-default>
 </ClientOnly>
 
+
+
 ## 单项展示
 
 collapse 可以接受一个 `single` 属性，表示将只有一项可以作为展示项。默认为 false。
