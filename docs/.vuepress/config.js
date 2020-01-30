@@ -14,19 +14,19 @@ module.exports = {
                 title: '说明',   // 必要的
                 path: '/home/',      // 可选的, 应该是一个绝对路径
                 collapsable: true, // 可选的, 默认值是 true,
-                sidebarDepth: 1,    // 可选的, 默认值是 1
+                sidebarDepth: 2,    // 可选的, 默认值是 1
             },
             {
                 title: '开始安装',
                 path: '/install/',
                 collapsable: true,
-                sidebarDepth: 1
+                sidebarDepth: 2
             },
             {
                 title: '使用组件',
                 path: '/components/',
                 collapsable: true,
-                sidebarDepth: 1,
+                sidebarDepth: 2,
                 children: [
                     '/components/button',
                     '/components/button-group',

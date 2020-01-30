@@ -44,3 +44,22 @@ import 'eden-gulu/dist/index.css'
 ```css
 *,*::before,*::after{box-sizing: border-box;}
 ```
+
+## 关于 parcel
+
+很多组件使用了自闭合标签。
+
+因此，如果你使用 parcel 进行打包或虚拟预览，请让你的 bundler 识别自闭合标签。
+你需要在 `package.json` 中做出设置：
+
+```json
+{
+  "posthtml": {
+      "recognizeSelfClosing": true
+  }
+}
+```
+
+否则，可能会引起样式的问题，甚至会引发组件的崩溃。
+
+建议使用 [Vue-Cli](https://cli.vuejs.org/zh/) 进行项目构建。
