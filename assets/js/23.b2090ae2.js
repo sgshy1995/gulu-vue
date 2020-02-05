@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[23],{296:function(n,t,e){"use strict";e.r(t);var i={components:{"g-input":e(165).a}},s=e(1),u=Object(s.a)(i,(function(){var n=this.$createElement,t=this._self._c||n;return t("div",[t("g-input")],1)}),[],!1,null,"638abb34",null);t.default=u.exports}}]);
