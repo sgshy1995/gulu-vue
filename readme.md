@@ -46,7 +46,7 @@ Tips:
 
 IE8 及以上浏览器支持此样式。
 
-你还需引入该框架中的 css 文件（后续会优化）。在 main.js 或所需组件中引入：
+你还需引入该框架中的 css 文件。在 main.js 或所需组件中引入：
 
 ```js
 import 'eden-gulu/dist/index.css'

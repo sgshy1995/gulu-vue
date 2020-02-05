@@ -60,7 +60,7 @@ g-collapse 必须接受：
     <g-collapse-item title="标题二" name="two">内容二</g-collapse-item>
     <g-collapse-item title="标题三" name="three">内容三</g-collapse-item>
     <br>
-    <div>这里可以展示数组更新的信息：<span style="color: #3AB982;">{{selectedTabs}}</span></div>
+    <div>这里可以展示多项数组更新的信息：<span style="color: #3AB982;">{{selectedTabs}}</span></div>
 </g-collapse>
 ```
 
@@ -94,6 +94,8 @@ collapse 可以接受一个 `single` 属性，表示将只有一项可以作为�
     <g-collapse-item title="标题一" name="one">内容一</g-collapse-item>
     <g-collapse-item title="标题二" name="two">内容二</g-collapse-item>
     <g-collapse-item title="标题三" name="three">内容三</g-collapse-item>
+    <br>
+    <div>这里可以展示单项数组更新的信息：<span style="color: #3AB982;">{{selectedTabs}}</span></div>
 </g-collapse>
 ```
 

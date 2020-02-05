@@ -4,11 +4,15 @@ title: 说明
 
 # Eden-Gulu UI 框架
 
+[![Build Status](https://travis-ci.org/sgshy1995/gulu-vue.svg?branch=master)](https://travis-ci.org/sgshy1995/gulu-vue)
+[![npm](https://img.shields.io/npm/v/eden-gulu)](https://www.npmjs.com/package/eden-gulu)
+[![GitHub](https://img.shields.io/github/license/sgshy1995/gulu-vue)](https://github.com/sgshy1995/gulu-vue/blob/master/LICENSE)
+
 本项目是完全用 [Vue.js](https://cn.vuejs.org/index.html) 编写的一套前端 UI 框架。
 
 总体风格为简洁、大方、稳重，没有很鲜艳的配色，但是很美观。全部组件都是站在开发者和用户的双重视角，来对代码进行一遍又一遍的重构，功能一次又一次的优化。
 
-当前版本：*V 1.1.0*
+当前版本：***V 1.1.1***
 
 如果你喜欢，请顺手 :star: ***star*** :star: 支持作者。
 

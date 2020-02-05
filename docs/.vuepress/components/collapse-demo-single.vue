@@ -5,6 +5,8 @@
       <g-collapse-item title="标题二" name="two">内容二</g-collapse-item>
       <g-collapse-item title="标题三" name="three">内容三</g-collapse-item>
     </g-collapse>
+    <br>
+    <div>这里可以展示单项数组更新的信息：<span style="color: #3AB982;">{{selectedTabs}}</span></div>
   </div>
 </template>
 

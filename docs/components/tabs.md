@@ -47,8 +47,16 @@ g-tabs
 │   ...
 ```
 
+## 设置 button
+
 ::: tip 提示
 每一个 g-tabs-item 必须通过传入 `name` 对应一个 g-tabs-panel。这是本组件必须要求的。同时， g-tabs 要接受 `selected` 属性，其值为 `name` 中的一个，作为默认选择。
+:::
+
+::: tip 提示
+在 g-tabs-head 中可以接受一个名为 `actions` 的插槽，对其中的 `button` 元素已经给出了默认样式。这里仅作为展示，你可以在此按钮上绑定事件。
+
+这个插槽并不是必须的。
 :::
 
 ```html
